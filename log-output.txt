@@ -1,0 +1,62 @@
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request starting HTTP/1.1 GET http://localhost:16361/Contact  
+
+CookieSample.Startup:Information: After UseExceptionHandler(): Pre next pipeline step: Request path /Contact
+CookieSample.Startup:Information: Before UseAuthentication(): Pre next pipeline step: Request path /Contact
+
+CookieSample.CustomCookieAuthenticationEvents:Warning: Throwing exception with guid bb7b7692-b569-4931-8a12-64a961d2bed1
+
+Exception thrown: 'CookieSample.CustomException' in CookieSample.dll
+An exception of type 'CookieSample.CustomException' occurred in CookieSample.dll but was not handled in user code
+Testing bb7b7692-b569-4931-8a12-64a961d2bed1
+
+Exception thrown: 'CookieSample.CustomException' in System.Private.CoreLib.dll
+Exception thrown: 'CookieSample.CustomException' in System.Private.CoreLib.dll
+
+Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware:Error: An unhandled exception has occurred while executing the request.
+
+CookieSample.CustomException: Testing bb7b7692-b569-4931-8a12-64a961d2bed1
+   at CookieSample.CustomCookieAuthenticationEvents.ValidatePrincipal(CookieValidatePrincipalContext context) in C:\code-poc\AspNetCore.Docs\aspnetcore\security\authentication\cookie\samples\2.x\CookieSample\CustomCookieAuthenticationEvents.cs:line 27
+   at Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CookieSample.Startup.<Configure>b__3_1(HttpContext context, Func`1 next) in C:\code-poc\AspNetCore.Docs\aspnetcore\security\authentication\cookie\samples\2.x\CookieSample\Startup.cs:line 76
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at CookieSample.Startup.<Configure>b__3_0(HttpContext context, Func`1 next) in C:\code-poc\AspNetCore.Docs\aspnetcore\security\authentication\cookie\samples\2.x\CookieSample\Startup.cs:line 65
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+CookieSample.Startup:Information: After UseExceptionHandler(): Pre next pipeline step: Request path /Error
+CookieSample.Startup:Information: Before UseAuthentication(): Pre next pipeline step: Request path /Error
+
+Exception thrown: 'CookieSample.CustomException' in System.Private.CoreLib.dll
+Exception thrown: 'CookieSample.CustomException' in System.Private.CoreLib.dll
+
+Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware:Error: An exception was thrown attempting to execute the error handler.
+
+CookieSample.CustomException: Testing bb7b7692-b569-4931-8a12-64a961d2bed1
+   at CookieSample.CustomCookieAuthenticationEvents.ValidatePrincipal(CookieValidatePrincipalContext context) in C:\code-poc\AspNetCore.Docs\aspnetcore\security\authentication\cookie\samples\2.x\CookieSample\CustomCookieAuthenticationEvents.cs:line 27
+   at Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CookieSample.Startup.<Configure>b__3_1(HttpContext context, Func`1 next) in C:\code-poc\AspNetCore.Docs\aspnetcore\security\authentication\cookie\samples\2.x\CookieSample\Startup.cs:line 76
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at CookieSample.Startup.<Configure>b__3_0(HttpContext context, Func`1 next) in C:\code-poc\AspNetCore.Docs\aspnetcore\security\authentication\cookie\samples\2.x\CookieSample\Startup.cs:line 65
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+
+Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer:Error: Connection ID "18302628895834243075", Request ID "80000007-0002-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+
+CookieSample.CustomException: Testing bb7b7692-b569-4931-8a12-64a961d2bed1
+   at CookieSample.CustomCookieAuthenticationEvents.ValidatePrincipal(CookieValidatePrincipalContext context) in C:\code-poc\AspNetCore.Docs\aspnetcore\security\authentication\cookie\samples\2.x\CookieSample\CustomCookieAuthenticationEvents.cs:line 27
+   at Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at CookieSample.Startup.<Configure>b__3_1(HttpContext context, Func`1 next) in C:\code-poc\AspNetCore.Docs\aspnetcore\security\authentication\cookie\samples\2.x\CookieSample\Startup.cs:line 76
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at CookieSample.Startup.<Configure>b__3_0(HttpContext context, Func`1 next) in C:\code-poc\AspNetCore.Docs\aspnetcore\security\authentication\cookie\samples\2.x\CookieSample\Startup.cs:line 65
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+   
+Microsoft.AspNetCore.Hosting.Internal.WebHost:Information: Request finished in 2466.0298ms 500 
